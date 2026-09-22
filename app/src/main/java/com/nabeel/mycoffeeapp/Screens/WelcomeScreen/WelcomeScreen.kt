@@ -41,7 +41,9 @@ fun WelcomeScreen() {
             modifier = Modifier.fillMaxSize(),
             contentScale = ContentScale.Crop)
 
-        Box(modifier = Modifier.fillMaxSize().background(color = Color.Black.copy(alpha = 0.4f))){
+        Box(modifier = Modifier.fillMaxSize().
+        background(color = Color.Black.copy(alpha = 0.4f)))
+        {
 
             Column(modifier = Modifier.fillMaxSize().padding(bottom = 70.dp,  ),
                 horizontalAlignment = Alignment.CenterHorizontally,
