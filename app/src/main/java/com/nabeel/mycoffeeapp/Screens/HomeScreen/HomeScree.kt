@@ -1,6 +1,7 @@
 package com.nabeel.mycoffeeapp.Screens.HomeScreen
 
 import android.annotation.SuppressLint
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -22,10 +23,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.nabeel.mycoffeeapp.R
 import com.nabeel.mycoffeeapp.Screens.ui_Components.MyBottomNavBar
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -85,9 +88,20 @@ fun HomeScree() {
                     tint = Color.White)
             }
 
-            Spacer(modifier = Modifier.height(40.dp))
+            Spacer(modifier = Modifier.height(30.dp))
 
             MySearchBar()
+
+            Spacer(modifier = Modifier.height(40.dp))
+            Image(
+                painter = painterResource(id = R.drawable.banner_1),
+                contentDescription = "Banner"
+            )
+
+            Spacer(modifier = Modifier.height(16.dp))
+            HomeScreenCategories()
+
+
 
         }
     }
