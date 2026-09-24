@@ -29,7 +29,7 @@ import androidx.compose.ui.unit.sp
 import com.nabeel.mycoffeeapp.Screens.ui_Components.MyBottomNavBar
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
-@Preview(showBackground = true )
+@Preview(showBackground = true ,  showSystemUi = true )
 @Composable
 fun HomeScree() {
 
@@ -84,6 +84,10 @@ fun HomeScree() {
                     contentDescription = "down",
                     tint = Color.White)
             }
+
+            Spacer(modifier = Modifier.height(40.dp))
+
+            MySearchBar()
 
         }
     }
