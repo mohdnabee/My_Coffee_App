@@ -30,6 +30,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.nabeel.mycoffeeapp.R
 import com.nabeel.mycoffeeapp.Screens.ui_Components.MyBottomNavBar
+import com.nabeel.mycoffeeapp.model.Product
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Preview(showBackground = true ,  showSystemUi = true )
@@ -95,11 +96,24 @@ fun HomeScree() {
             Spacer(modifier = Modifier.height(40.dp))
             Image(
                 painter = painterResource(id = R.drawable.banner_1),
-                contentDescription = "Banner"
-            )
+                contentDescription = "Bannner" )
 
             Spacer(modifier = Modifier.height(16.dp))
             HomeScreenCategories()
+
+            //  Display  Produ
+            val  products =  listOf(
+                Product(id = 1 , "Espresso" , "Strong and rich ",   3.8 ,  R.drawable.coffee_2),
+                Product(id = 2 , "Latte" ,    "smooth and creamy",  4.50,  R.drawable.coffee_3),
+                Product(id = 3 , "Cappuccino","with chocolate",     4.20,  R.drawable.coffee_1),
+                Product(id = 4 , "Mocha" ,    "with cocoa flavour", 4.70,  R.drawable.coffee_4),
+                Product(id = 5 , "Macchiato" ,"Bold and Milky",     4.60,  R.drawable.coffee_5),
+                Product(id = 6 , "Flat White","Velvety  smooth",    4.40,  R.drawable.coffee_6),
+                Product(id = 7 , "Ice Macho" ,"Refreshing and rich",4.70,  R.drawable.coffee_4),
+            )
+
+
+
 
 
 
